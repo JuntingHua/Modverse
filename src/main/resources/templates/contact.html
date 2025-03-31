@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>AI Showcase - Contact</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <img src="/images/modverse-logo.png" alt="Modverse Logo" class="corner-logo">
+    
+    <div class="content">
+        <h1>Contact Us</h1>
+        <form action="/contact" method="post">
+            <div>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="nav-button">Send</button>
+        </form>
+        
+        <div class="nav-buttons">
+            <a href="/" class="nav-button">Home</a>
+        </div>
+    </div>
+</body>
+</html> 

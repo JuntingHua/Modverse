@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>AI Showcase - Home</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="networkCanvas"></canvas>
+    
+    <div class="content">
+        <img src="/images/modverse-logo.png" alt="Modverse Logo" class="main-logo">
+        
+        <div class="nav-buttons">
+            <a href="/about" class="nav-button">About</a>
+            <a href="/team" class="nav-button">Team</a>
+            <a href="/mvp" class="nav-button">MVP Display</a>
+            <a href="/contact" class="nav-button">Contact</a>
+        </div>
+    </div>
+
+    <script th:src="@{/js/networkEffect.js}"></script>
+</body>
+</html> 

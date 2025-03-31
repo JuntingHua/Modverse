@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "about": "关于我们",
+    "team": "团队",
+    "mvp": "产品展示",
+    "contact": "联系我们",
+    "language": "语言"
+  },
+  "about": {
+    "ourStory": "我们的故事",
+    "mission": "使命",
+    "vision": "愿景"
+  },
+  "mvp": {
+    "projects": "项目",
+    "showcase": "展示",
+    "demo": "演示"
+  },
+  "home": {
+    "welcome": "欢迎来到 Modverse",
+    "tagline": "创新科技的未来",
+    "learnMore": "了解更多",
+    "innovation": "创新",
+    "excellence": "卓越",
+    "impact": "影响力",
+    "innovationDesc": "突破技术和设计的界限。",
+    "excellenceDesc": "追求卓越品质。",
+    "impactDesc": "为世界带来改变。"
+  }
+} 

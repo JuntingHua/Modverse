@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modverse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .text-charcoal {
+            color: #36454F;
+        }
+
+        .text-navy {
+            color: #1B365D;
+        }
+    </style>
+</head>
+<body>
+    <header class="fixed w-full bg-white z-50 border-b border-gray-100">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo Section -->
+            <a href="/" class="flex items-center">
+                <div class="w-10 h-10 relative">
+                    <svg viewBox="0 0 40 40" class="w-full h-full">
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color: #1a365d" />
+                                <stop offset="100%" style="stop-color: #3b82f6" />
+                            </linearGradient>
+                        </defs>
+                        <path
+                            d="M5 30L20 5L35 30H28L20 15L12 30H5Z"
+                            fill="url(#logo-gradient)"
+                            class="drop-shadow-lg"
+                        />
+                    </svg>
+                </div>
+                <span class="ml-2 text-2xl font-sans text-charcoal">modverse</span>
+            </a>
+
+            <!-- Navigation Menu -->
+            <nav class="flex items-center space-x-8">
+                <div class="dropdown relative">
+                    <div class="flex items-center cursor-pointer">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                        <span class="text-navy hover:text-blue-600">About</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                    <div class="dropdown-content rounded-md">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our Story</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mission</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Vision</a>
+                    </div>
+                </div>
+
+                <a href="#" class="text-navy hover:text-blue-600">Team</a>
+
+                <div class="dropdown relative">
+                    <div class="flex items-center cursor-pointer">
+                        <span class="text-navy hover:text-blue-600">MVP Display</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                    <div class="dropdown-content rounded-md">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Projects</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Showcase</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Demo</a>
+                    </div>
+                </div>
+
+                <a href="#" class="text-navy hover:text-blue-600">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <!-- Your page content goes here -->
+    </main>
+</body>
+</html> 

@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "about": "About",
+    "team": "Team",
+    "mvp": "MVP Display",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "about": {
+    "ourStory": "Our Story",
+    "mission": "Mission",
+    "vision": "Vision"
+  },
+  "mvp": {
+    "projects": "Projects",
+    "showcase": "Showcase",
+    "demo": "Demo"
+  },
+  "home": {
+    "welcome": "Welcome to Modverse",
+    "tagline": "Innovating the future of technology",
+    "learnMore": "Learn More",
+    "innovation": "Innovation",
+    "excellence": "Excellence",
+    "impact": "Impact",
+    "innovationDesc": "Pushing boundaries in technology and design.",
+    "excellenceDesc": "Delivering quality in everything we do.",
+    "impactDesc": "Making a difference in the world."
+  }
+} 
