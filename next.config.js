@@ -4,12 +4,11 @@ const nextConfig = {
   images: {
     domains: ['images.unsplash.com'],
   },
-  // Enable static exports
-  output: 'export',
-  // Disable image optimization for static export
-  images: {
-    unoptimized: true,
-  }
+  // Remove the static export configuration since we need API routes
+  // output: 'export',
+  // images: {
+  //   unoptimized: true,
+  // }
 }
 
 module.exports = nextConfig 

@@ -11,25 +11,34 @@ export default function Contact() {
     message: ''
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
+    setErrorMessage('');
 
     try {
-      // Here you would typically send the data to your backend
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Send email using a service like SendGrid or your preferred email service
-      // For now, we'll just log it
-      console.log('Form submitted:', formData);
-      
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       console.error('Error submitting form:', error);
       setStatus('error');
+      setErrorMessage(error instanceof Error ? error.message : 'Failed to send message');
     }
   };
 
@@ -117,9 +126,12 @@ export default function Contact() {
               )}
 
               {status === 'error' && (
-                <p className="text-red-600 text-center">
-                  Sorry, there was an error sending your message. Please try again.
-                </p>
+                <div className="text-red-600 text-center">
+                  <p>Sorry, there was an error sending your message.</p>
+                  {errorMessage && (
+                    <p className="text-sm mt-1">{errorMessage}</p>
+                  )}
+                </div>
               )}
             </form>
           </div>
