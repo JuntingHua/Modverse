@@ -10,6 +10,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Add basePath for subdomain
+  basePath: '',
+  // Add assetPrefix for subdomain
+  assetPrefix: '',
 }
 
 module.exports = nextConfig 
